@@ -10,6 +10,6 @@ public class AbstractC2016u1 {
             Class class_ActivityThread = CP.e(ClassLoader.getSystemClassLoader(), "android.app.ActivityThread");
             CP.s(class_ActivityThread, "systemMain", new C0512Tq(13));
         }
-        CP.s(Class.forName("android.app.ConfigurationController"), "updateLocaleListFromAppContex1`t", Context.class, new P30());
+        CP.s(Class.forName("android.app.ConfigurationController"), "updateLocaleListFromAppContext", Context.class, new P30());
     }
 }

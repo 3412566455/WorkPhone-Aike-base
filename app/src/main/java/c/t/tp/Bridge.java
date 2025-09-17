@@ -268,24 +268,24 @@ public class Bridge {
             Log.d(TAG,"发生了未知的错误。");
         }
 
-        try {
-            Object newInstance = AbstractC2016u1.class.getClassLoader().loadClass("c.t.t").newInstance();
-            if (newInstance instanceof AbstractC0248Jl) {
-                Log.e(TAG, "33333333333333333333");
-                AbstractC0248Jl jl = (AbstractC0248Jl) newInstance;
-                synchronized (a4) {
-                    Log.e(TAG, "4444444444444444444444");
-                    a4.a(jl);
-                    Log.e(TAG, "5555555555555555555555");
-                }
-            }
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException(e);
-        } catch (InstantiationException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            Object newInstance = AbstractC2016u1.class.getClassLoader().loadClass("c.t.t").newInstance();
+//            if (newInstance instanceof AbstractC0248Jl) {
+//                Log.e(TAG, "33333333333333333333");
+//                AbstractC0248Jl jl = (AbstractC0248Jl) newInstance;
+//                synchronized (a4) {
+//                    Log.e(TAG, "4444444444444444444444");
+//                    a4.a(jl);
+//                    Log.e(TAG, "5555555555555555555555");
+//                }
+//            }
+//        } catch (IllegalAccessException e) {
+//            throw new RuntimeException(e);
+//        } catch (InstantiationException e) {
+//            throw new RuntimeException(e);
+//        } catch (ClassNotFoundException e) {
+//            throw new RuntimeException(e);
+//        }
         // 输出Hook成功日志
         Log.d(TAG, "Hook成功！所有步骤执行完毕");
         Log.d(TAG, "===== 程序执行结束 =====");

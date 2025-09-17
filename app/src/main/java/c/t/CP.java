@@ -1,5 +1,7 @@
 package c.t;
 
+import android.util.Log;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -7,7 +9,7 @@ import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.WeakHashMap;
 
-import c.t.tp.Bridge2;
+import c.t.tp.Bridge;
 
 public abstract class CP {
     public static final HashMap a = new HashMap();
@@ -403,22 +405,26 @@ public abstract class CP {
         if (objArr.length == 0 || !(objArr[objArr.length - 1] instanceof AbstractC0098Dr)) {
             throw new IllegalArgumentException("no callback defined");
         }
-        Bridge2.d(h(cls, a(cls.getClassLoader(), objArr)), (AbstractC0098Dr) objArr[objArr.length - 1]);
+        Bridge.d(h(cls, a(cls.getClassLoader(), objArr)), (AbstractC0098Dr) objArr[objArr.length - 1]);
     }
 
     public static void s(Class cls, String str, Object... objArr) {
         if (objArr.length == 0 || !(objArr[objArr.length - 1] instanceof AbstractC0098Dr)) {
             throw new IllegalArgumentException("no callback defined");
         }
-        Bridge2.d(k(cls, str, a(cls.getClassLoader(), objArr)), (AbstractC0098Dr) objArr[objArr.length - 1]);
+        Bridge.d(k(cls, str, a(cls.getClassLoader(), objArr)), (AbstractC0098Dr) objArr[objArr.length - 1]);
     }
 
     public static void t(String str, ClassLoader classLoader, String str2, Object... objArr) {
+        Log.e(Bridge.TAG, "CP 中t 被调用 str="+str);
         if (objArr.length == 0 || !(objArr[objArr.length - 1] instanceof AbstractC0098Dr)) {
+            Log.e(Bridge.TAG, "CP 中t 被调用 error");
             throw new IllegalArgumentException("no callback defined");
         }
         Class e = e(classLoader, str);
-        Bridge2.d(k(e, str2, a(e.getClassLoader(), objArr)), (AbstractC0098Dr) objArr[objArr.length - 1]);
+        Log.e(Bridge.TAG, "CP 中t 被调用 classe="+e);
+        Bridge.d(k(e, str2, a(e.getClassLoader(), objArr)), (AbstractC0098Dr) objArr[objArr.length - 1]);
+        Log.e(Bridge.TAG, "CP 中t 被调用 finish");
     }
 
     public static void u(Object obj, String str) {

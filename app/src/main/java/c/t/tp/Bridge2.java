@@ -161,7 +161,6 @@ public class Bridge2 {
         Log.e(TAG, "1111111111111111111"+"f1442c = ["+f1442c+"]");
         try {
             if (z) {
-                AbstractC2016u1.d();
                 Object newInstance = AbstractC2016u1.class.getClassLoader().loadClass("c.t.t").newInstance();
                 Log.e(TAG, "2222222222222222222");
                 if (newInstance instanceof AbstractC0248Jl) {

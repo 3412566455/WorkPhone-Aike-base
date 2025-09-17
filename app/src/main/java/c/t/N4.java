@@ -2,10 +2,11 @@ package c.t;
 
 import java.util.Arrays;
 
-import c.t.tp.Bridge2;
+import c.t.tp.Bridge;
+
 
 public class N4 {
-    public volatile transient Object[] a = Bridge2.a;
+    public volatile transient Object[] a = Bridge.a;
 
     public final void a(Object obj) {
         synchronized (this) {

@@ -1,15 +1,14 @@
 package c.t;
 
 import android.content.Context;
+import android.os.Bundle;
 
+import aike.AikeCallback;
 import c.t.tp.Bridge2;
 
 public class AbstractC2016u1 {
-    public static void d() throws Throwable {
-        if (Bridge2.f1442c) {
-            Class class_ActivityThread = CP.e(ClassLoader.getSystemClassLoader(), "android.app.ActivityThread");
-            CP.s(class_ActivityThread, "systemMain", new C0512Tq(13));
-        }
-        CP.s(Class.forName("android.app.ConfigurationController"), "updateLocaleListFromAppContext", Context.class, new P30());
+    public static void test(ClassLoader classLoader){
+        Object[] objArray1 = new Object[]{Bundle.class, new AikeCallback(classLoader, 1)};
+        CP.t("com.tencent.mm.ui.LauncherUI", classLoader, "onCreate", objArray1);
     }
 }

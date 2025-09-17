@@ -5,7 +5,6 @@ import android.content.pm.ApplicationInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,8 +15,6 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
-import com.apollo.safechat.R;
-
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,8 +23,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import c.t.tp.Bridge; // 假设这个Bridge类存在
-import utils.PackageInstallerUtil;
+import c.t.tp.Bridge2; // 假设这个Bridge类存在
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -60,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnCallBridge.setOnClickListener(v -> {
             new Thread(() -> {
-                Bridge.main(new String[]{}, 4);
+                Bridge2.main(new String[]{}, 4);
                 showToastOnUI("已调用 Bridge.main，请查看 Logcat");
             }).start();
         });

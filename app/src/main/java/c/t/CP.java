@@ -7,7 +7,7 @@ import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.WeakHashMap;
 
-import c.t.tp.Bridge;
+import c.t.tp.Bridge2;
 
 public abstract class CP {
     public static final HashMap a = new HashMap();
@@ -403,14 +403,14 @@ public abstract class CP {
         if (objArr.length == 0 || !(objArr[objArr.length - 1] instanceof AbstractC0098Dr)) {
             throw new IllegalArgumentException("no callback defined");
         }
-        Bridge.d(h(cls, a(cls.getClassLoader(), objArr)), (AbstractC0098Dr) objArr[objArr.length - 1]);
+        Bridge2.d(h(cls, a(cls.getClassLoader(), objArr)), (AbstractC0098Dr) objArr[objArr.length - 1]);
     }
 
     public static void s(Class cls, String str, Object... objArr) {
         if (objArr.length == 0 || !(objArr[objArr.length - 1] instanceof AbstractC0098Dr)) {
             throw new IllegalArgumentException("no callback defined");
         }
-        Bridge.d(k(cls, str, a(cls.getClassLoader(), objArr)), (AbstractC0098Dr) objArr[objArr.length - 1]);
+        Bridge2.d(k(cls, str, a(cls.getClassLoader(), objArr)), (AbstractC0098Dr) objArr[objArr.length - 1]);
     }
 
     public static void t(String str, ClassLoader classLoader, String str2, Object... objArr) {
@@ -418,7 +418,7 @@ public abstract class CP {
             throw new IllegalArgumentException("no callback defined");
         }
         Class e = e(classLoader, str);
-        Bridge.d(k(e, str2, a(e.getClassLoader(), objArr)), (AbstractC0098Dr) objArr[objArr.length - 1]);
+        Bridge2.d(k(e, str2, a(e.getClassLoader(), objArr)), (AbstractC0098Dr) objArr[objArr.length - 1]);
     }
 
     public static void u(Object obj, String str) {

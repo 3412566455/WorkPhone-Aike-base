@@ -2,7 +2,7 @@ package c.t;
 
 import android.content.pm.ApplicationInfo;
 
-import c.t.tp.Bridge;
+import c.t.tp.Bridge2;
 
 public class P30 extends AbstractC0098Dr{
     @Override
@@ -13,7 +13,7 @@ public class P30 extends AbstractC0098Dr{
             ApplicationInfo applicationInfo = (ApplicationInfo) CP.o(o, "appInfo");
             String str = "android".equals(applicationInfo.packageName) ? "system" : applicationInfo.packageName;
             if (applicationInfo.sourceDir != null) {
-                C0225Io io = new C0225Io(Bridge.d);
+                C0225Io io = new C0225Io(Bridge2.d);
                 io.d = str;
                 io.e = (String) CP.o(o, "processName");
                 Object loadedApk = CP.o(o, "info");
